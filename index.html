@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Renaissance Tower</title>
+    <link href="./reset.css" type="text/css" rel="stylesheet">
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+<div class="main">
+
+    <!--Tower Icon & Name-->
+    <div class="tower">
+        <img class="towerIcon" src="images/tower-icon.png"><span class="towerName" id="name"></span>
+    </div>
+
+
+    <!--Address-->
+    <div id="address" class="address"></div>
+
+    <!--Photo & Map-->
+    <div class="photoAndMap">
+        <div class="mainBlockLeft">
+            <div class="blockPadding">
+                <img src="images/Renaissance-Tower.jpg">
+            </div>
+        </div>
+        <div class="mainBlockRight">
+            <div class="blockPadding">
+                <div id="map" class="map"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Property Details-->
+    <div class="blockPropertyDetails">
+        <h3 class="headerPropertyDetails">PROPERTY DETAILS</h3>
+
+        <div class="grid">
+            <div class="fieldName">Property Type:</div>
+            <div id="propertyType"></div>
+
+            <div class="fieldName">Website:</div>
+            <div id="website"></div>
+
+            <div class="fieldName">Total Building Area:</div>
+            <div id="totalBuildingArea"></div>
+
+            <div class="fieldName">Property Class:</div>
+            <div id="propertyClass"></div>
+
+            <div class="fieldName">Tenancy:</div>
+            <div id="tenancy"></div>
+
+            <div class="fieldName">Year Built:</div>
+            <div id="yearBuilt"></div>
+
+            <div class="fieldName">No. of Tenant:</div>
+            <div id="noOfTenant"></div>
+
+            <div class="fieldName">Floors:</div>
+            <div id="floors"></div>
+        </div>
+    </div>
+
+    <div id="description" class="description">
+        <span class="description-header">Description: </span>
+    </div>
+
+    <!--Availability Table-->
+    <p class="availabilities">
+        <img src="images/AVAILABILITIES.png">
+        <span>AVAILABILITIES</span>
+        <span class="textRight">4 records</span>
+    </p>
+
+    <table id="table" class="availabilityTable">
+        <thead>
+        <tr>
+            <th>Unit Name/Number</th>
+            <th>Record Type</th>
+            <th>Available Area</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+<!---------------Google Map--------------->
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Renaissance Tower
+        let renaissanceTower = {lat: 32.781397, lng: -96.801730};
+        // The map, centered at Renaissance Tower
+        let map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 13, center: renaissanceTower});
+        // The marker, positioned at Renaissance Tower
+        let marker = new google.maps.Marker({position: renaissanceTower, map: map});
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtTl89qTEnleh5rZypwjLJvugPv0qv3Y&callback=initMap"></script>
+
+</body>
+
+</html>
